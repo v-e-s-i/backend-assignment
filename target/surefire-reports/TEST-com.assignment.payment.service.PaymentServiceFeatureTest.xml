@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.assignment.payment.service.PaymentServiceFeatureTest" time="1.516" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/vesi/backend-assignment/target/test-classes:/Users/vesi/backend-assignment/target/classes:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.5/spring-boot-starter-data-jpa-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.5/spring-boot-starter-aop-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/spring-aop/6.1.6/spring-aop-6.1.6.jar:/Users/vesi/.m2/repository/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.5/spring-boot-starter-jdbc-3.2.5.jar:/Users/vesi/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/vesi/.m2/repository/org/springframework/spring-jdbc/6.1.6/spring-jdbc-6.1.6.jar:/Users/vesi/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar:/Users/vesi/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/vesi/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/vesi/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/vesi/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/vesi/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/vesi/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/vesi/.m2/repository/net/bytebuddy/byte-buddy/1.14.13/byte-buddy-1.14.13.jar:/Users/vesi/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/vesi/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/vesi/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/vesi/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/vesi/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/vesi/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/vesi/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/vesi/.m2/repository/org/springframework/data/spring-data-jpa/3.2.5/spring-data-jpa-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/data/spring-data-commons/3.2.5/spring-data-commons-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/spring-orm/6.1.6/spring-orm-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-context/6.1.6/spring-context-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-expression/6.1.6/spring-expression-6.1.6.jar:/Users/vesi/.m2/repository/io/micrometer/micrometer-observation/1.12.5/micrometer-observation-1.12.5.jar:/Users/vesi/.m2/repository/io/micrometer/micrometer-commons/1.12.5/micrometer-commons-1.12.5.jar:/Users/vesi/.m2/repository/org/springframework/spring-tx/6.1.6/spring-tx-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-beans/6.1.6/spring-beans-6.1.6.jar:/Users/vesi/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/vesi/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/vesi/.m2/repository/org/springframework/spring-aspects/6.1.6/spring-aspects-6.1.6.jar:/Users/vesi/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/vesi/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.5/spring-boot-starter-test-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.5/spring-boot-starter-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot/3.2.5/spring-boot-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.5/spring-boot-autoconfigure-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.5/spring-boot-starter-logging-3.2.5.jar:/Users/vesi/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/vesi/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/vesi/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/vesi/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/vesi/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/vesi/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-test/3.2.5/spring-boot-test-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.5/spring-boot-test-autoconfigure-3.2.5.jar:/Users/vesi/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/vesi/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/vesi/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/vesi/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/vesi/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/vesi/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/vesi/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/vesi/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/vesi/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/vesi/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vesi/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/vesi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/vesi/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/vesi/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/vesi/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar:/Users/vesi/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/vesi/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/vesi/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/vesi/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/vesi/.m2/repository/org/springframework/spring-core/6.1.6/spring-core-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-jcl/6.1.6/spring-jcl-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-test/6.1.6/spring-test-6.1.6.jar:/Users/vesi/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/vesi/backend-assignment/target/surefire/surefirebooter-20260421010741513_3.jar /Users/vesi/backend-assignment/target/surefire 2026-04-21T01-07-41_484-jvmRun1 surefire-20260421010741513_1tmp surefire_0-20260421010741513_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/vesi/backend-assignment/target/test-classes:/Users/vesi/backend-assignment/target/classes:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.5/spring-boot-starter-data-jpa-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.5/spring-boot-starter-aop-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/spring-aop/6.1.6/spring-aop-6.1.6.jar:/Users/vesi/.m2/repository/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.5/spring-boot-starter-jdbc-3.2.5.jar:/Users/vesi/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/vesi/.m2/repository/org/springframework/spring-jdbc/6.1.6/spring-jdbc-6.1.6.jar:/Users/vesi/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar:/Users/vesi/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/vesi/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/vesi/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/vesi/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/vesi/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/vesi/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/vesi/.m2/repository/net/bytebuddy/byte-buddy/1.14.13/byte-buddy-1.14.13.jar:/Users/vesi/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/vesi/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/vesi/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/vesi/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/vesi/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/vesi/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/vesi/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/vesi/.m2/repository/org/springframework/data/spring-data-jpa/3.2.5/spring-data-jpa-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/data/spring-data-commons/3.2.5/spring-data-commons-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/spring-orm/6.1.6/spring-orm-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-context/6.1.6/spring-context-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-expression/6.1.6/spring-expression-6.1.6.jar:/Users/vesi/.m2/repository/io/micrometer/micrometer-observation/1.12.5/micrometer-observation-1.12.5.jar:/Users/vesi/.m2/repository/io/micrometer/micrometer-commons/1.12.5/micrometer-commons-1.12.5.jar:/Users/vesi/.m2/repository/org/springframework/spring-tx/6.1.6/spring-tx-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-beans/6.1.6/spring-beans-6.1.6.jar:/Users/vesi/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/vesi/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/vesi/.m2/repository/org/springframework/spring-aspects/6.1.6/spring-aspects-6.1.6.jar:/Users/vesi/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar:/Users/vesi/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.5/spring-boot-starter-test-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.5/spring-boot-starter-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot/3.2.5/spring-boot-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.5/spring-boot-autoconfigure-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.5/spring-boot-starter-logging-3.2.5.jar:/Users/vesi/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/vesi/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/vesi/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/vesi/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/vesi/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/vesi/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-test/3.2.5/spring-boot-test-3.2.5.jar:/Users/vesi/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.5/spring-boot-test-autoconfigure-3.2.5.jar:/Users/vesi/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/vesi/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/vesi/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/vesi/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/Users/vesi/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/Users/vesi/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/Users/vesi/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/vesi/.m2/repository/org/awaitility/awaitility/4.2.1/awaitility-4.2.1.jar:/Users/vesi/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/vesi/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/vesi/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/vesi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/vesi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/vesi/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/vesi/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/vesi/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar:/Users/vesi/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/vesi/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/vesi/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/vesi/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/vesi/.m2/repository/org/springframework/spring-core/6.1.6/spring-core-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-jcl/6.1.6/spring-jcl-6.1.6.jar:/Users/vesi/.m2/repository/org/springframework/spring-test/6.1.6/spring-test-6.1.6.jar:/Users/vesi/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/vesi"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/vesi/backend-assignment"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/vesi/backend-assignment/target/surefire/surefirebooter-20260421010741513_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="21.0.10+7-LTS"/>
+    <property name="user.name" value="vesi"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.10+7"/>
+    <property name="localRepository" value="/Users/vesi/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/79/jx96kxf12t316x1hrxr7mxnw0000gn/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="21.0.10"/>
+    <property name="user.dir" value="/Users/vesi/backend-assignment"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="28930"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/vesi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.10+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="vipMemberPointPaymentAppliesBothDiscounts" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.314">
+    <system-out><![CDATA[01:07:41.850 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.assignment.payment.service.PaymentServiceFeatureTest]: PaymentServiceFeatureTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:07:41.883 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.assignment.payment.PaymentApplication for test class com.assignment.payment.service.PaymentServiceFeatureTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-04-21T01:07:42.026+09:00  INFO 28930 --- [           main] c.a.p.service.PaymentServiceFeatureTest  : Starting PaymentServiceFeatureTest using Java 21.0.10 with PID 28930 (started by vesi in /Users/vesi/backend-assignment)
+2026-04-21T01:07:42.027+09:00  INFO 28930 --- [           main] c.a.p.service.PaymentServiceFeatureTest  : No active profile set, falling back to 1 default profile: "default"
+2026-04-21T01:07:42.152+09:00  INFO 28930 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21T01:07:42.172+09:00  INFO 28930 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2026-04-21T01:07:42.298+09:00  INFO 28930 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-21T01:07:42.320+09:00  INFO 28930 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-04-21T01:07:42.332+09:00  INFO 28930 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-04-21T01:07:42.420+09:00  INFO 28930 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-21T01:07:42.429+09:00  INFO 28930 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21T01:07:42.489+09:00  INFO 28930 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=SA
+2026-04-21T01:07:42.489+09:00  INFO 28930 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21T01:07:42.499+09:00  WARN 28930 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21T01:07:42.795+09:00  INFO 28930 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists members cascade 
+Hibernate: 
+    drop table if exists orders cascade 
+Hibernate: 
+    drop table if exists payment_discount_histories cascade 
+Hibernate: 
+    drop table if exists payments cascade 
+Hibernate: 
+    create table members (
+        id bigint generated by default as identity,
+        grade varchar(255) not null check (grade in ('NORMAL','VIP','VVIP')),
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table orders (
+        original_price integer not null,
+        id bigint generated by default as identity,
+        member_id bigint not null,
+        product_name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table payment_discount_histories (
+        discount_amount integer not null,
+        discount_rate numeric(5,4),
+        applied_at timestamp(6) not null,
+        id bigint generated by default as identity,
+        payment_id bigint not null,
+        applied_grade varchar(255) not null,
+        discount_type varchar(255) not null check (discount_type in ('GRADE','PAYMENT_METHOD')),
+        policy_name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table payments (
+        final_amount integer not null,
+        id bigint generated by default as identity,
+        order_id bigint not null unique,
+        paid_at timestamp(6) not null,
+        payment_method varchar(255) not null check (payment_method in ('CREDIT_CARD','POINT')),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists orders 
+       add constraint FK2vq7lo4gkknrmghj3rqpqqg6s 
+       foreign key (member_id) 
+       references members
+Hibernate: 
+    alter table if exists payment_discount_histories 
+       add constraint FKmj9m6ek8j03unc5rcbp18ay3k 
+       foreign key (payment_id) 
+       references payments
+Hibernate: 
+    alter table if exists payments 
+       add constraint FK81gagumt0r8y3rmudcgpbk42l 
+       foreign key (order_id) 
+       references orders
+2026-04-21T01:07:42.812+09:00  INFO 28930 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T01:07:42.945+09:00  INFO 28930 --- [           main] c.a.p.service.PaymentServiceFeatureTest  : Started PaymentServiceFeatureTest in 1.024 seconds (process running for 1.4)
+Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/vesi/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="twoHistoriesForPointPaymentWithGradeDiscount" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.012">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pdh1_0.id,
+        pdh1_0.applied_at,
+        pdh1_0.applied_grade,
+        pdh1_0.discount_amount,
+        pdh1_0.discount_rate,
+        pdh1_0.discount_type,
+        pdh1_0.payment_id,
+        pdh1_0.policy_name 
+    from
+        payment_discount_histories pdh1_0 
+    left join
+        payments p1_0 
+            on p1_0.id=pdh1_0.payment_id 
+    where
+        p1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="normalGradeHistoryStoredWithZeroDiscount" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.004">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pdh1_0.id,
+        pdh1_0.applied_at,
+        pdh1_0.applied_grade,
+        pdh1_0.discount_amount,
+        pdh1_0.discount_rate,
+        pdh1_0.discount_type,
+        pdh1_0.payment_id,
+        pdh1_0.policy_name 
+    from
+        payment_discount_histories pdh1_0 
+    left join
+        payments p1_0 
+            on p1_0.id=pdh1_0.payment_id 
+    where
+        p1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="creditCardPaymentDoesNotApplyPointDiscount" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.006">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+]]></system-out>
+  </testcase>
+  <testcase name="gradeDiscountHistoryIsSaved" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.005">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pdh1_0.id,
+        pdh1_0.applied_at,
+        pdh1_0.applied_grade,
+        pdh1_0.discount_amount,
+        pdh1_0.discount_rate,
+        pdh1_0.discount_type,
+        pdh1_0.payment_id,
+        pdh1_0.policy_name 
+    from
+        payment_discount_histories pdh1_0 
+    left join
+        payments p1_0 
+            on p1_0.id=pdh1_0.payment_id 
+    where
+        p1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="vvipMemberPointPaymentAppliesBothDiscounts" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.003">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+]]></system-out>
+  </testcase>
+  <testcase name="historiesPreserveSnapshotAfterPolicyWouldChange" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.006">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pdh1_0.id,
+        pdh1_0.applied_at,
+        pdh1_0.applied_grade,
+        pdh1_0.discount_amount,
+        pdh1_0.discount_rate,
+        pdh1_0.discount_type,
+        pdh1_0.payment_id,
+        pdh1_0.policy_name 
+    from
+        payment_discount_histories pdh1_0 
+    left join
+        payments p1_0 
+            on p1_0.id=pdh1_0.payment_id 
+    where
+        p1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="normalMemberPointPaymentAppliesOnlyPointDiscount" classname="com.assignment.payment.service.PaymentServiceFeatureTest" time="0.003">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        members
+        (grade, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        orders
+        (member_id, original_price, product_name, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id 
+    from
+        payments p1_0 
+    left join
+        orders o1_0 
+            on o1_0.id=p1_0.order_id 
+    where
+        o1_0.id=? 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        payments
+        (final_amount, order_id, paid_at, payment_method, id) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        payment_discount_histories
+        (applied_at, applied_grade, discount_amount, discount_rate, discount_type, payment_id, policy_name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, default)
+]]></system-out>
+  </testcase>
+</testsuite>
